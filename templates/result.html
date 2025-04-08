@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Verification Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Verification Result</h2>
+    <div class="card">
+      {% if valid %}
+        <p style="color:green;">✅ This certificate is <strong>valid</strong> and verified on the blockchain.</p>
+      {% else %}
+        <p style="color:red;">❌ Certificate not found or invalid hash.</p>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>
