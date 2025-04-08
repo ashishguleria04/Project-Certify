@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Certificate Generated</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Certificate Generated!</h2>
+    <div class="card">
+      <p><strong>Name:</strong> {{ cert.name }}</p>
+      <p><strong>Course:</strong> {{ cert.course }}</p>
+      <p><strong>Date:</strong> {{ cert.date }}</p>
+      <p><strong>Blockchain Hash:</strong> {{ hash }}</p>
+      <a href="{{ url_for('download', filename=pdf) }}" class="btn">Download Certificate PDF</a>
+    </div>
+  </div>
+</body>
+</html>
